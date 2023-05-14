@@ -39,13 +39,5 @@ public class SpringLiblaryProjectApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
-        ApplicationContext ctx  = new AnnotationConfigApplicationContext(MyDbConfigContext.class);
-        //ctx.getBean(CreateUserTable.class).createUserTable();
-        ctx.getBean(AddUserToUsersTable.class).removeUsers();
-        ctx.getBean(AddUserToUsersTable.class).addUser(new String[]{"Yakimchuk", "Nikita", "1998 1 1" , "yakim@gmail.com", "+79218853124", "1, 2"});
-        ctx.getBean(AddUserToUsersTable.class).addUser(new String[]{"Alecseeva", "Ulyana", "1999 1 1" , "alecseeva@gmail.com", "+79218883333", "3"});
-        ctx.getBean(AddUserToUsersTable.class).checkUsers();
-        List<Book> books = ctx.getBean(UserDao.class).getBooksInfo("'+79218853124'");
     }
 }
