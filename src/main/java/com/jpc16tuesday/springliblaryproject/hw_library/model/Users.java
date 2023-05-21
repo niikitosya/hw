@@ -1,6 +1,7 @@
-package com.jpc16tuesday.springliblaryproject.library.hw_model;
+package com.jpc16tuesday.springliblaryproject.hw_library.model;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.boot.context.properties.bind.DefaultValue;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

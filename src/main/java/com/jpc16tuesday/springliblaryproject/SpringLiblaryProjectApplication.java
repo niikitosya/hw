@@ -39,5 +39,6 @@ public class SpringLiblaryProjectApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        System.out.println("Swagger path: http://localhost:8080/swagger-ui/index.html");
     }
 }

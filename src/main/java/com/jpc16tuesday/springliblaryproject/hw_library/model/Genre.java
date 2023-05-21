@@ -1,4 +1,4 @@
-package com.jpc16tuesday.springliblaryproject.library.hw_model;
+package com.jpc16tuesday.springliblaryproject.hw_library.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

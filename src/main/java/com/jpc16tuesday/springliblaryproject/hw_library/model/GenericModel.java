@@ -1,4 +1,4 @@
-package com.jpc16tuesday.springliblaryproject.library.hw_model;
+package com.jpc16tuesday.springliblaryproject.hw_library.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -15,7 +15,7 @@ public class GenericModel {
     @Id
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "default_generator")
-    private int id;
+    private Long id;
     @Column(name = "created_when")
     private LocalDateTime createdWhen;
     @Column(name = "created_by")

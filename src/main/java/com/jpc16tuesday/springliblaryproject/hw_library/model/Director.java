@@ -1,5 +1,6 @@
-package com.jpc16tuesday.springliblaryproject.library.hw_model;
+package com.jpc16tuesday.springliblaryproject.hw_library.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 

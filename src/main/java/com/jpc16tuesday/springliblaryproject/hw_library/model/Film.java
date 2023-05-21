@@ -1,5 +1,6 @@
-package com.jpc16tuesday.springliblaryproject.library.hw_model;
+package com.jpc16tuesday.springliblaryproject.hw_library.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -24,7 +25,13 @@ public class Film extends GenericModel {
     @Column(name = "genre", nullable = false)
     @Enumerated(value = EnumType.STRING)
     private Genre genre;
-    @ManyToMany(mappedBy = "films")
+    @JsonIgnore
+    @ManyToMany
+    @JoinTable(name = "directors_films",
+            joinColumns = @JoinColumn(name = "films_id"),
+            foreignKey = @ForeignKey(name = "FK_FILMS_DIRECTORS"),
+            inverseJoinColumns = @JoinColumn(name = "directors_id"),
+            inverseForeignKey = @ForeignKey(name = "FK_DIRECTORS_FILMS"))
     List<Director> directors;
 
 }

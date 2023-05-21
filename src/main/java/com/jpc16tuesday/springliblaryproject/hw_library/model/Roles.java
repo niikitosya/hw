@@ -1,4 +1,4 @@
-package com.jpc16tuesday.springliblaryproject.library.hw_model;
+package com.jpc16tuesday.springliblaryproject.hw_library.model;
 import jakarta.persistence.*;
 import lombok.*;
 @Entity
@@ -7,11 +7,9 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Roles{
-    @Id
-    @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+@SequenceGenerator(name = "default_generator", sequenceName = "Roles_sequence", allocationSize = 1)
+public class Roles extends GenericModel{
+
     @Column(name = "title", nullable = false)
     private String title;
     @Column(name = "description", nullable = false)
