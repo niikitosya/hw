@@ -7,11 +7,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+//@RestController
 @RequestMapping(value = "/roles")//куда стучаться по пути к нашему серверу http://localhost:8080/authors
 @Tag(name = "Роли", description = "Контроллер для работы с ролями пользователей")
-public class RoleController extends GenericController<Roles> {
-    public RoleController(GenericRepository<Roles> genericRepository) {
-        super(genericRepository);
-    }
+public class RoleController{//extends GenericController<Roles,RolesDTO> {
+    //public class RoleController GenericRepository<Roles> genericRepository) {
+   //     super(genericRepository);
+  //  }
+  //  }
 }

@@ -5,6 +5,7 @@ import org.springframework.boot.context.properties.bind.DefaultValue;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
     @Table(name = "users_for_film")
@@ -41,4 +42,6 @@ import java.time.LocalDateTime;
         @ManyToOne
         @JoinColumn(name = "role_id", nullable = false, foreignKey = @ForeignKey(name = "FK_USER_ROLES"))
         private Roles role;
+
+        private List<Film> rentedFilms;
     }

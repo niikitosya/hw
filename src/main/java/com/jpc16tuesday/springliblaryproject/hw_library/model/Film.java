@@ -3,6 +3,8 @@ package com.jpc16tuesday.springliblaryproject.hw_library.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -27,10 +29,10 @@ public class Film extends GenericModel {
     private Genre genre;
     @JsonIgnore
     @ManyToMany
-    @JoinTable(name = "directors_films",
+   @JoinTable(name = "directors_films",
             joinColumns = @JoinColumn(name = "films_id"),
             foreignKey = @ForeignKey(name = "FK_FILMS_DIRECTORS"),
-            inverseJoinColumns = @JoinColumn(name = "directors_id"),
+           inverseJoinColumns = @JoinColumn(name = "directors_id"),
             inverseForeignKey = @ForeignKey(name = "FK_DIRECTORS_FILMS"))
     List<Director> directors;
 

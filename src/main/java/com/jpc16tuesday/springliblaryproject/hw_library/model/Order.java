@@ -21,7 +21,7 @@ public class Order extends GenericModel {
     @Column(name = "return_date", nullable = false)
     private LocalDate returnDate;
     @Column(name = "rent_period", nullable = false)
-    private Integer rentDate;
+    private LocalDate rentDate;
     @Column(name = "purchase", nullable = false)
     private Boolean purchase;
 }
